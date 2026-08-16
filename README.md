@@ -36,26 +36,28 @@ pip install -r requirements.txt
 ## Project Structure
 
 ```text
-Project Structure
 encryption/
 ├── crypto/
 │   └── crypto.py
 ├── decrypt.py
 ├── decypt_received_message.py
 ├── encrypt.py
+├── LICENSE
 ├── message/
 │   ├── create.py
 │   ├── created_message.txt
-│   ├── encrypted_message.txt
-│   └── decrypted_message.txt
+│   ├── decrypted_message.txt
+│   └── encrypted_message.txt
 ├── private_key.pem
 ├── public_key.pem
+├── README.md
+├── received_message.txt
+├── requirements.txt
 ├── server/
 │   ├── listener.py
 │   └── send.py
 └── utils/
     └── grab_os.py
-
 ```
 
 ### 1. Get the Public Key
