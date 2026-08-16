@@ -97,6 +97,7 @@ The encrypted message is then transferred to the listener.
 decrypted.py
 encrypt.py
 requirements.txt
+received_message.txt   <---
 
 server/
 ├── send.py
@@ -106,6 +107,12 @@ message/
 └── encrypted_message.txt
 
 publickey.pem
+```
+
+## Encrypt received message
+
+```bash
+python decrypt_received_message.py
 ```
 
 The recipient keeps their private key and should never send it to anyone.
