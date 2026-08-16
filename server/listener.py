@@ -1,5 +1,3 @@
-import requests
-
 import socket
 import struct
 
@@ -10,7 +8,7 @@ OUTPUT_FILE = "received_message.txt"
 
 
 def receive_file(conn):
-    # 8 Byte Dateigröße empfangen
+
     header = b""
 
     while len(header) < 8:
