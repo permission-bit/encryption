@@ -88,7 +88,63 @@ This creates the encrypted message:
 message/encrypted_message.txt
 ```
 
-### 3. Start the Listener
+## 3. Configure the Listener
+
+On the receiver's computer, open:
+
+```text
+server/listener.py
+```
+
+Set:
+
+```python
+HOST = "0.0.0.0"
+PORT = 9003
+```
+
+`0.0.0.0` allows the listener to accept incoming connections.
+
+### Find the Public IP
+
+Run:
+
+```bash
+python grab_ip.py
+```
+
+This displays the public IP address of the receiver.
+
+Example:
+
+```text
+Public IP: 203.0.113.42
+```
+
+Remember this IP address.
+
+## 4. Configure the Sender
+
+On the sender's computer, open:
+
+```text
+server/send.py
+```
+
+Set the receiver's public IP:
+
+```python
+HOST = "203.0.113.42"
+PORT = 9003
+```
+
+Replace `203.0.113.42` with the public IP shown by `grab_ip.py`.
+
+The port must be the same on both computers.
+
+> **Note:** When using a public IP, the receiver's router/firewall must allow incoming TCP connections on port `9003`. Port forwarding may be required.
+
+### 5. Start the Listener
 
 The recipient starts the listener **before** the message is sent:
 
@@ -98,7 +154,7 @@ python server/listener.py
 
 The listener waits for the incoming connection.
 
-### 4. Send the Message
+### 6. Send the Message
 
 The sender runs:
 
