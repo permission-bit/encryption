@@ -33,14 +33,29 @@ pip install -r requirements.txt
 
 ## How it works
 
-There are three main parts:
+## Project Structure
 
 ```text
-decrypt.py
-encrypt.py
-server/
-├── send.py
-└── listener.py
+Project Structure
+encryption/
+├── crypto/
+│   └── crypto.py
+├── decrypt.py
+├── decypt_received_message.py
+├── encrypt.py
+├── message/
+│   ├── create.py
+│   ├── created_message.txt
+│   ├── encrypted_message.txt
+│   └── decrypted_message.txt
+├── private_key.pem
+├── public_key.pem
+├── server/
+│   ├── listener.py
+│   └── send.py
+└── utils/
+    └── grab_os.py
+
 ```
 
 ### 1. Get the Public Key
