@@ -57,7 +57,7 @@ The public key can be sent to the sender by email or another suitable method.
 
 The private key must stay with the recipient.
 
-### 2. Encrypt the message
+### 2. Write and encrypt a message
 
 Run:
 
