@@ -121,7 +121,7 @@ Example:
 Public IP: 203.0.113.42
 ```
 
-Remember this IP address.
+Remember this IP address. (Send the ip address and your public key to the sender!)
 
 ## 4. Configure the Sender
 
