@@ -15,13 +15,13 @@ def receive_file(conn):
         chunk = conn.recv(8 - len(header))
 
         if not chunk:
-            raise ConnectionError("Verbindung während Header abgebrochen")
+            raise ConnectionError("Connection was aborted during header exchange")
 
         header += chunk
 
     file_size = struct.unpack("!Q", header)[0]
 
-    print(f"Erwarte {file_size} Bytes")
+    print(f"Expecting {file_size} bytes")
 
     received = 0
 
@@ -33,7 +33,8 @@ def receive_file(conn):
 
             if not chunk:
                 raise ConnectionError(
-                    "Verbindung während Dateiübertragung abgebrochen"
+                    "Connection interrupted during file-transfer"
+                    
                 )
 
             f.write(chunk)
@@ -53,7 +54,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
     server.bind((HOST, PORT))
     server.listen(5)
 
-    print(f"Server läuft auf {HOST}:{PORT}")
+    print(f"Server is running on {HOST}:{PORT}")
 
     while True:
         conn, addr = server.accept()
