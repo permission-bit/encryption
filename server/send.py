@@ -23,8 +23,8 @@ def send_file(file_path):
             while chunk := f.read(4096):
                 s.sendall(chunk)
 
-    print(f"Gesendet: {file_path}")
-    print(f"Größe: {file_size} Bytes")
+    print(f"Sent: {file_path}")
+    print(f"Size: {file_size} bytes")
 
 
 send_file(encrypted_message_dir)
