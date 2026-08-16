@@ -1,5 +1,6 @@
 import socket
 from pathlib import Path
+import struct 
 
 
 BASE_DIR = Path(__file__).resolve().parent
